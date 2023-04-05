@@ -1,6 +1,6 @@
 {
-    "name": "xylo_phone_app",
-    "short_name": "xylo_phone_app",
+    "name": "xylo_phone_app_1",
+    "short_name": "xylo_phone_app_1",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

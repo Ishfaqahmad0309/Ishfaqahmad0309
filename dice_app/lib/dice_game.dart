@@ -11,12 +11,12 @@ class DiceGame extends StatefulWidget {
 
 class _DiceGameState extends State<DiceGame> {
   final diceList = const [
-    'pictures/d1.jpg',
-    'pictures/d2.jpg',
-    'pictures/d3.png',
-    'pictures/d4.png',
-    'pictures/d5.jpg',
-    'pictures/d6.png',
+    'assets/d1.jpg',
+    'assets/d2.jpg',
+    'assets/d3.jpg',
+    'assets/d4.jpg',
+    'assets/d5.jpg',
+    'assets/d6.jpg',
   ];
   final random = Random.secure();
   var index1 = 0;
@@ -105,7 +105,7 @@ class _DiceGameState extends State<DiceGame> {
                 ),
                 ElevatedButton(
                   onPressed: (){
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=>CustomDice()));
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>Customdiceapp()));
                   },
                   child: const Text(
                     'custom Dice',

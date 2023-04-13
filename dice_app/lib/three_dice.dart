@@ -10,12 +10,12 @@ class threeDiceGame extends StatefulWidget {
 
 class _DiceGameState extends State<threeDiceGame> {
   final diceList = const [
-    'pictures/d1.jpg',
-    'pictures/d2.jpg',
-    'pictures/d3.png',
-    'pictures/d4.png',
-    'pictures/d5.jpg',
-    'pictures/d6.png',
+    'assets/d1.jpg',
+    'assets/d2.jpg',
+    'assets/d3.jpg',
+    'assets/d4.jpg',
+    'assets/d5.jpg',
+    'assets/d6.jpg',
   ];
   final random = Random.secure();
   var index1 = 0;

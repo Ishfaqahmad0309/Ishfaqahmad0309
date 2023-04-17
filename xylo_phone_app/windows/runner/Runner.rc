@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "xylo_phone_app_1" "\0"
+            VALUE "FileDescription", "xylophone_app" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "xylo_phone_app_1" "\0"
+            VALUE "InternalName", "xylophone_app" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "xylo_phone_app_1.exe" "\0"
-            VALUE "ProductName", "xylo_phone_app_1" "\0"
+            VALUE "OriginalFilename", "xylophone_app.exe" "\0"
+            VALUE "ProductName", "xylophone_app" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

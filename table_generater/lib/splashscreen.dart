@@ -33,7 +33,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Splash Screen',style: TextStyle(
+        title: Text('Table generater',style: TextStyle(
           fontWeight: FontWeight.bold,
           color: Colors.white,
         ),),
@@ -41,26 +41,39 @@ class SplashScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Table Generator App",style: TextStyle(
-              color: Colors.deepOrange[600],
-              fontSize: 24,
-              fontStyle: FontStyle.italic
-            ),), // Replace with your image asset
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/screen1');
-              },
-              child: Text('Join',style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),),
-            ),
-          ],
+          children: <Widget>[
+        new Container(
+        child: new Image.asset(
+          'assets/images/cal.png',
+          height: 200.0,
+          width: 200.0,
+          fit: BoxFit.cover,
         ),
-      ),
+          
+        ),
+
+           Container(
+               child: Center(
+                 child: ElevatedButton(
+                   child: Text('Table Generater'),
+                   style: ElevatedButton.styleFrom(
+                     primary: Colors.orange,
+                     // side: BorderSide(color: Colors.yellow, width: 5),
+                     textStyle: const TextStyle(
+                         color: Colors.white, fontSize: 25, fontStyle: FontStyle.normal),
+                     shape: BeveledRectangleBorder(
+                         borderRadius: BorderRadius.all(Radius.circular(15))),
+                     shadowColor: Colors.lightBlue,
+                   ),
+                   onPressed: () => Navigator.of(context)
+                       .push(MaterialPageRoute(builder: (context) => const Secreen1())),
+                 ),
+               )
+            ),
+      ]
+    )
+    ),
     );
-  }
+}
 }
 

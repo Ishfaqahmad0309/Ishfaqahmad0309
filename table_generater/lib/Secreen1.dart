@@ -20,7 +20,8 @@ class _Secreen1State extends State<Secreen1> {
             style: TextStyle(color: Colors.white),
           )),
       body: Padding(
-        padding: const EdgeInsets.only(left: 10.0, top: 20),
+        padding: const EdgeInsets.only(left: 30.0, top: 30, right: 30),
+
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,

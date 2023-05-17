@@ -20,13 +20,15 @@ class _Secreen2State extends State<Secreen2> {
         width: MediaQuery.of(context).size.width,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
               width: 200,
               height: MediaQuery.of(context).size.height * 0.75,
               child: Expanded(
+
                 child: ListView.builder(
+
                     itemCount: length + 1,
                     itemBuilder: (context, index) {
                       return Text(

@@ -51,6 +51,7 @@ class _Secreen3State extends State<Secreen3> {
     int multiply = randomNumber!;
     int answer = widget.table * multiply;
     return Scaffold(
+
       appBar: AppBar(
         title: const Text(
           'Quiz',
@@ -59,8 +60,11 @@ class _Secreen3State extends State<Secreen3> {
         ),
       ),
       body: ListView(
+
         children: [
+
           SizedBox(
+
             width: MediaQuery.of(context).size.width,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -85,6 +89,7 @@ class _Secreen3State extends State<Secreen3> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Text(
+
                         positionRandom == 1
                             ? '${widget.table * multiply}'
                             : '${(widget.table + positionRandom!) * randomNumber2!}',

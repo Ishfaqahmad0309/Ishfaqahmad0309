@@ -2,9 +2,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-
+import 'package:table_app/Secreen1.dart';
 
 import 'package:table_app/secreen3.dart';
+
 class Secreen3 extends StatefulWidget {
   const Secreen3({
     Key? key,
@@ -25,6 +26,12 @@ class _Secreen3State extends State<Secreen3> {
   var randomGenerator = Random();
   bool isCorrect = false, isPressed = false;
   TextEditingController controller = TextEditingController();
+
+
+
+  int counter = 0;
+
+
   @override
   void initState() {
     positionRandom = randomGenerator.nextInt(4);
@@ -36,7 +43,9 @@ class _Secreen3State extends State<Secreen3> {
         widget.start + randomGenerator.nextInt(widget.end - widget.start);
     // TODO: implement initState
     super.initState();
+
   }
+
 
   @override
   void dispose() {
@@ -51,20 +60,16 @@ class _Secreen3State extends State<Secreen3> {
     int multiply = randomNumber!;
     int answer = widget.table * multiply;
     return Scaffold(
-
       appBar: AppBar(
-        title: const Text(
-          'Quiz',
-          style: TextStyle(
+        title: Text(
+          'Quiz Question Number: ${counter.toString()}',
+          style: const TextStyle(
               color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
         ),
       ),
       body: ListView(
-
         children: [
-
           SizedBox(
-
             width: MediaQuery.of(context).size.width,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -89,7 +94,6 @@ class _Secreen3State extends State<Secreen3> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Text(
-
                         positionRandom == 1
                             ? '${widget.table * multiply}'
                             : '${(widget.table + positionRandom!) * randomNumber2!}',
@@ -172,29 +176,28 @@ class _Secreen3State extends State<Secreen3> {
                           fontSize: 30),
                     ),
                   ),
-
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-    ElevatedButton(
-    onPressed: () {
-    Navigator.push(
-    context,
-    MaterialPageRoute(
-    builder: (context) => Secreen3(
-    table: widget.table,
-    start: widget.start,
-    end: widget.end,
-    )));
-    },
-    child: const Text(
-    'Next',
-    style: TextStyle(color: Colors.white),
-    )),
 
-
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => super.widget,
+                                ),
+                              );
+                              counter++;
+                            });
+                          },
+                          child: const Text(
+                            'Next',
+                            style: TextStyle(color: Colors.white),
+                          )),
                     ],
                   ),
                 )
@@ -202,6 +205,22 @@ class _Secreen3State extends State<Secreen3> {
             ),
           ),
         ],
+      ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            FloatingActionButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Secreen1()));
+              },
+              child: const Icon(Icons.arrow_back_ios_new),
+            ),
+          ],
+        ),
       ),
     );
   }

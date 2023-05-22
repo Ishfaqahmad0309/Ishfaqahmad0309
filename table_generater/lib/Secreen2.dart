@@ -52,7 +52,7 @@ class _Secreen2State extends State<Secreen2> {
                             )));
                   },
                   child: const Text(
-                    'Generate Table',
+                    'Generate quiz',
                     style: TextStyle(color: Colors.white),
                   )),
             )
